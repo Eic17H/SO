@@ -1,0 +1,101 @@
+
+Due parziali: novembre e fine natale
+Puoi scegliere per ciascuno teoria, lab o entrambi
+Stessa cosa gli appelli
+Prima teoria e poco dopo lab
+Alla fine un progetto
+Il voto è conservato fino a settembre
+Però il progetto è salvato
+Le specifiche del progetto sono dette verso la fine del corso
+Il progetto verrà poi discusso in un appello
+Consegni, lo correggono, e all'appello si discute (bisogna essere ammessi)
+Il progetto si può fare in due
+Da soli o in due il progetto è lo stesso
+    
+Progetto: in C, tanti thread che comunicano tra loro
+Questo corso parte da ARE, e sono molto importanti PR1 e ASD
+Bonus a tempo
+Il progetto o passa o non passa, punteggio fisso ma dipende dal tempo
+Ci sono punti bonus per progetti eccezionalmente meritevoli
+Il massimo si può prendere sempre, ma presto si può prendere 36
+Ma comunque se vai male ai parziali i bonus ti salvano
+Altri dettagli domani
+    
+
+
+PRIMA PARTE DELLA LEZIONE
+Introduzione al vero argomento del corso
+Useremo Linux. Macchina virtuale
+Nel modulo di laboratorio vedremo:
+         Elaboratori: quanto visto in ARE
+             Non basta, vogliamo tanti processi insieme
+         Processi, che comunicano con l'hardware tramite il sistema operativo
+             Il SO gestisce tutto questo
+         Linux, cmd, software open source, amministrazione di sistema e di rete
+             Studiamo Linux perché nel backend si usa spesso Linux
+         Programmazione di sistema, multiprocesso, interprocess communic.
+             Chiamate di sistema (creare thread etc)
+Il SWdev non è l'unica opzione lavorativa. Otterremo abilità per gli altri lavori, come admSysNet
+Le ops sono le cose di admSysNet, che gestisce il deployment per adattarsi agli utenti, e i cloud etc
+"Devops" lavoro molto importante
+All'inizio odieremo imparare a usare il cmd
+Ogni object che si muove sullo schermo è un processo (pipe)
+La seconda versione del progetto è un processo, ma ogni object è un thread
+    
+
+
+CENNI STORICI
+Pensando a Linux, si pensa a Unix
+All'inizio non c'erano OS, c'erano grosse macchine che eseguivano un programma alla volta
+Poi hanno fatto i primi OS, scritti in assembly, quindi 1 OS per macchina
+Anni '60, primo sistema operativo in HLL (C), essendo in HLL si può portare su altre macchine
+     HLL: astrazione
+Il C fu creato per fare un OS in modo astratto, così si usa su più macchine diverse
+Per fare un OS, il C doveva toccare la memoria. Molto pericoloso, segfault etc
+In PR2, che fa OOP con Java, non devi toccare la memoria a mano, fa tutto lui e tu non sbagli
+In computer graphics, si usa C per essere molto efficienti
+Chiusa parentesi, Unix era FOSS, quindi si è diffuso molto, soprattutto tra accademici e sviluppatori
+Si continuò a contribuire in maniera collaborativa e aperta
+Poi il C era facile da imparare
+Tantissime branch di Unix. Qual è il vero Unix?
+Molti tentativi per standardizzarlo
+Ah btw Unix fu fatto alla Bell
+L'IBM aveva AiX, Sun aveva Solaris, etc
+Bell claimò copyright (vedi EED), morirono le altre
+Free Software Foundation, Richard Stallman, GNU
+GNU: Gnu's Not Unix. Ispirato a Unix ma non davvero Unix, software davvero libero
+Nascono poi vari programmi importanti molto diffusi anche fuori Linux, e molto importanti tutt'ora
+     gcc (gnu C compiler), LaTeX (formattazione), Emacs (ambiente di sviluppo), Grub (ne parleremo dopo)
+Mancava un kernel efficiente. Il kernel è molto fondamentale
+Prof. Tanenbaum creò MINIX (mini unix), ispirato a Unix ma nuovo e piccolo
+     Tutto il codice sorgente è in un libro
+Linus Torvalds creò Linux. Era uno studente di Tanenbaum
+Torvalds ha creato Linux come hobby, ha risolto i problemi della gestione dei processi (kernel)
+Linux, bel kernel, si fonde con GNU (GNU-Linux), risolto tutto
+Il Linux moderno è GNU-Linux. Kernel Linux e applicativi GNU
+C'è un diagramma nelle slide
+MacOS è Unix
+    
+
+
+VM o dual boot
+Dual boot: bootloader, partizione, grub
+Mount point, nel caso di Linux è la root, "/"
+La swap partition è un meccanismo dei SO per mettere la RAM su disco10
+     Windows usa un file, Linux usa una partizione
+Si può cifrare una partizione
+Se cifri la partizione, la chiave sta in RAM, ma magari va poi nella swap, e ci rimane, quindi cifra anche la swap
+LVM: crea partizioni astratte ma concretamente distribuite su più dischi
+RAID: distribuire i dati su più dischi, duplicate, così se perdi uno hai gli altri
+Sarà utile una VM
+Creeremo un gioco
+Importante avere la stessa versione di Linux, stiamo facendo cose a basso livello. Consigliata una VM per questo
+Ci sono due tipi di VM
+Tipo 1: comunicazione diretta con l'HW, efficiente
+Tipo 2: useremo questa, virtualbox e simili, VM comunica con OS, più facile da usare
+C'è una guida su come installare una BM di Ubuntu
+Ubuntu 22.04.3 x64
+Oracle VM VirtualBox 7.0.10
+    
+
+ Prossima volta altra teoria
