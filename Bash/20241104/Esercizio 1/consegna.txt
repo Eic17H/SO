@@ -1,0 +1,5 @@
+Indirizzo internet come parametro
+Scarica il codice sorgente della pagina
+Non visualizza eventuali warning o errori
+Visualizza file sorgente di qualunque lunghezza
+Usare wget

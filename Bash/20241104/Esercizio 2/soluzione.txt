@@ -1,0 +1,1 @@
+Non sono riuscito, ma se usi 2> /dev/null puoi poi vedere se è vuota

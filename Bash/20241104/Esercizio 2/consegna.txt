@@ -1,0 +1,3 @@
+Acquisisci una lettera che corrisponde a un'opzione di uname
+Se non corrisponde a nessuna, visualizza un avvertimento
+Se corrisponde, visualizza le informazioni sul sistema e spiega cosa stai mostrando

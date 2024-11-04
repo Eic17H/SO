@@ -1,0 +1,2 @@
+uniq -c ti dice la conta di ciascuna cosa unica
+Con cut prendiamo tutto ciò che c'è prima del primo spazio

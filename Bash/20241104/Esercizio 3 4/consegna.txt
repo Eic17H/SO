@@ -1,0 +1,11 @@
+3:
+Dato il file rubrica.txt con la struttura ruolo nome cognome e-mail
+Stampa conteggio-ruolo per ogni ruolo
+Stampa tutti i non ricercatori
+Metti in italia.txt tutti quelli con email .it
+Si può risolvere senza iterazione
+
+4:
+Sostituisci Raffaella con Antonella e metti in rubrica_due.txt
+Togli le prime tre righe di rubrica_due.txt e metti in rubrica_tre.txt
+Emtrambi usando sed

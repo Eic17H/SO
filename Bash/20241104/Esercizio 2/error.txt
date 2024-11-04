@@ -1,0 +1,2 @@
+uname: invalid option -- 'b'
+Try 'uname --help' for more information.
