@@ -140,7 +140,7 @@ Una volta arrivati i processori <span class="orange">RISC</span>, i <span class=
 Per motivi economici, IBM si è impuntato che si poteva fare un computer domestico a bassa potenza. Ebbero successo ma furono troppo ottimisti.
 Ai tempi i computer erano molto grandi.
 Si sono affidati ad altri per il sistema operativo e per la CPU.
-Il SO era di uno <span class="pink">studentello</span>, un tale Bill Gates, era DOS e faceva schifo.
+Il SO era di uno <span class="pink">studentello</span>, un tale Bill Gates, era DOS e faceva <span class="pink">schifo</span>.
 Per la CPU, una certa compagnia Intel.
 Gates e Intel hanno saltato il middle man, che faceva la parte più facile, costruire l'hardware.
 Nacquero i computer IBM-compatible, che costavano meno.
