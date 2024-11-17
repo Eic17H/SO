@@ -1,1 +1,6 @@
-{}
+{
+  "textFontFamily": "Roboto,Fairfax HD",
+  "enabledCssSnippets": [
+    "file"
+  ]
+}
