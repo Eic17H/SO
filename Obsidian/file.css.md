@@ -1,3 +1,0 @@
-red {
-	--text-normal: blue;
-}

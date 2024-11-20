@@ -50,7 +50,7 @@ Il DevOps si occupa della parte sistemistica.
 La parte applicativa e quella sistemistica si mischiano.
 
 Alcuni argomenti del corso saranno:
-- Interfacce HW-SW.
+- Interfacce <span class="orange">HW-SW</span>.
 - Instruction set diverso da 8088.
 - Gestione della memoria e delle periferiche.
 - Usare computer senza un sistema operativo.
