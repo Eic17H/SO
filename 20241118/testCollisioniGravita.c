@@ -14,9 +14,12 @@ int main()
     int spd = 0;
     while (1)
     {
+        mvaddch(ROWS, COLS, spd);
         input = getch();
-        if (input == 'a')
+        if (input == 'a'){
             y = 0;
+            spd = 0;
+        }
         mvaddch(y, x, OBJECT);
         spd += G;
         y += spd;
