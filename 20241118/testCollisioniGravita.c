@@ -25,3 +25,4 @@ int main()
         mvaddch(y, x, OBJECT);
         refresh();
     }
+}
