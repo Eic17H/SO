@@ -17,7 +17,7 @@ int main()
         input = getch();
         if (input == 'a')
             y = 0;
-        mvaddch(y, x, ' ');
+        mvaddch(y, x, OBJECT);
         spd += G;
         y += spd;
         if (y >= LINES)
