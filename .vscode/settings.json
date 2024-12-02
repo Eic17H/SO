@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "ncurses.h": "c",
+        "unistd.h": "c",
+        "curses.h": "c",
+        "comune.h": "c",
+        "guardia.h": "c",
+        "time.h": "c",
+        "ladro.h": "c",
+        "stdio.h": "c"
+    }
+}
