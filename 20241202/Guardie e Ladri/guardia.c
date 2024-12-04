@@ -13,11 +13,16 @@ void movimentoG(int *x, int *y){
 }
 
 void azioniGuardia(int pipe_fds[2], Pos pos){
-    // Ho mischiato pipe e riferimenti, mi arrendo
-    int x = pos.x;
-    int y = pos.y;
+    noecho();
+    int x = 0;
+    int y = 0;
     movimentoG(&x, &y);
-    controlla(&x, &y);
-    close(pipe_fds[0]); 
-    write(pipe_fds[1], {x, y}, sizeof(Pos));
+    //controlla(&x, &y);
+    close(pipe_fds[0]);
+    Pos posizione;
+    posizione.x = x;
+    posizione.y = y;
+    int aaaaa[2];
+    aaaaa[0]=x; aaaaa[1]=y;
+    write(pipe_fds[1], aaaaa, 2);
 }
