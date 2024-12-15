@@ -4,6 +4,8 @@
 !*.*
 # ignora i file oggetto
 *.o
+#ignora .out
+*.out
 # disignora makefile
 !*makefile
 # disignora le cartelle
