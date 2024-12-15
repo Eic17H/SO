@@ -1,0 +1,6 @@
+Source 1 stampa Hello world 1
+Source 2 stampa Hello world 2
+Compilali in code1 e code2 eseguibili
+Con bash vedi se funzionano
+Con cmp confronta i due file source e i due file exec
+Con diff la stessa cosa

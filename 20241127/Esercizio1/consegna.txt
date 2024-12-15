@@ -1,0 +1,5 @@
+Due processi, si gioca a tris. Si gioca in "due" ma si gioca da soli
+Tutte le comunicazioni avverranno tramite socket
+Parti da qualcosa di più semplice
+La prima cosa che è meglio provare a fare è stabilire la connessione - input da un terminale, output nell'altro
+Rispetta l'ordine in quel grafico verde e arancione, separato server e client, slide 8/8

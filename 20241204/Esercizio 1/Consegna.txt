@@ -1,0 +1,4 @@
+Il thread principale fa 5 altri thread
+Ogni thread stampa 10'000 volte lo stesso carattere (a, e, i, o, u), poi returna
+Il main aspetta che finiscano
+Carattere e numero come argomenti

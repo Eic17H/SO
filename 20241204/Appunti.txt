@@ -1,0 +1,35 @@
+Thread
+
+Per compilare:
+    gcc source.c -l pthread -o out
+Un'altra opzione -l. Se lo vogliamo usare con ncurses, dobbiamo mettere entrambi
+Ecco che torna utile makefile, li metti lì
+
+Tutti i thread hanno un ID, di tipo pthread_t
+󱥞󱤘󱥇󱤉󱥆󱤙󱥂󱥵󱥁
+    void* start_routine(void*);
+Se voglio fare altri thread che fanno una funzione diversa, ne faccio un'altra
+Ogni thread è collegata a una thread function
+    Ci possono XR + thread per thrfun
+
+Per crearli:
+    int pthread_create(ID, attributi, start routine, argomenti)
+Gli attributi sono opzioni di sistema, noi le lasciamo a NULL
+Gli argomenti invece li useremo
+La start routine è passata come void*??? Boh
+
+Questione importante sugli argomenti
+Sono simili a come abbiamo messo dei valori nelle pipe
+Non possiamo usare prototipi diversi per thread diversi
+Abbiamo una struttura generica, e definiremo strutture personalizzate
+Passiamo solo un puntatore alla struttura, che poi conterrà tutto
+
+Valore di ritorno, 0 successo, >0 fallimento, diverso dai process (dove fallimento è <0)
+
+Quindi, quando accendi un thread, esegue a partire dalla funzione specificata
+Invece il thread principale continua con la funzione chiamante
+
+Come termino un thread?
+Se nelle opzioni metti NULL, puoi usare pthread_cancel(pthread_t), simile a kill()
+C'è anche pthread_exit(), o return, simili
+Non useremo pthread_kill(pthread_t, int signal), perché non si aggancia alla logica di quello che dovremo fare

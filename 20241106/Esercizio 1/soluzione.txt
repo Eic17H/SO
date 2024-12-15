@@ -1,0 +1,2 @@
+Cmp dice che c'è differenza e dice a che byte si trova
+Diff fa vedere la riga per i file sorgente e stampa le righe che differiscono, ma per il codice dice solo che esiste una differenza
