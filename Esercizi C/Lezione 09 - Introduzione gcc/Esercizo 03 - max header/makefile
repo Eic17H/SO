@@ -5,4 +5,4 @@ main.o: main.c max.h
 max.o: max.c max.h
 	gcc -c max.c
 clean:
-	rm -f *.o
+	rm -f ./*.o

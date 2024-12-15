@@ -10,6 +10,8 @@
         "ladro.h": "c",
         "stdio.h": "c",
         "types.h": "c",
-        "avvocato.h": "c"
+        "avvocato.h": "c",
+        "min.h": "c",
+        "max.h": "c"
     }
 }
