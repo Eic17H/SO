@@ -4,9 +4,11 @@
 !*.*
 # ignora i file oggetto
 *.o
-#ignora .out
+# ignora .out
 *.out
 # disignora makefile
 !*makefile
 # disignora le cartelle
 !*/
+# altre estensioni che non conosco
+*.gch
