@@ -24,7 +24,15 @@ typedef struct{
 int mutex = 0;
 Data buffer[DIM_BUFFER];
 int head=0;
-int tail=0;
+int tail=(-1)%DIM_BUFFER;
+
+bool codavuota(){
+    return (tail+1-head)%DIM_BUFFER==0;
+}
+
+bool codapiena(){
+    return (head+1-tail)%DIM_BUFFER==0;
+}
 
 void* azioniL(void* data_in){
     srand(time(NULL));
@@ -40,7 +48,7 @@ void* azioniL(void* data_in){
             case 3: pos.y--; break;
             default: break;
         }
-        while((head-tail)%DIM_BUFFER<=1 || mutex);
+        while(codapiena() || mutex) printf("qua\n");
         mutex = 1;
         data->pos = pos;
         buffer[tail] = *data;
@@ -58,7 +66,7 @@ int main(){
     (*datiL).mittente = LADRO;
     pthread_create(&idL, NULL, &azioniL, datiL);
     while(1){
-        while((head-tail)%DIM_BUFFER<=1 || mutex);
+        while(codavuota() || mutex);
         mutex = 1;
         printf("%d   %d\n", buffer[head].pos.x, buffer[head].pos.y);
         head = (head+1)%DIM_BUFFER;
