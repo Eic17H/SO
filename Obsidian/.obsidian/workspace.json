@@ -1,66 +1,37 @@
 {
   "main": {
-    "id": "f493fbda5cf605be",
+    "id": "d00d9fc872370158",
     "type": "split",
     "children": [
       {
-        "id": "a6120f9950a74145",
+        "id": "31f3ae92aa4ec2f7",
         "type": "tabs",
         "children": [
           {
-            "id": "0e10de06d9685d44",
+            "id": "a66330531185d053",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian/Sistemi Operativi - Modulo II.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sistemi Operativi - Modulo II"
-            }
-          },
-          {
-            "id": "d66071482ce2c68c",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "740780c1acf45cea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian/Sistemi Operativi - Modulo I.md",
-                "mode": "source",
-                "source": false
-              },
               "icon": "lucide-file",
-              "title": "Sistemi Operativi - Modulo I"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "6be8073d4df58c6d",
+    "id": "a3141c51c1947223",
     "type": "split",
     "children": [
       {
-        "id": "a25f394b773913da",
+        "id": "3f5f0c48a8fd8d4c",
         "type": "tabs",
         "children": [
           {
-            "id": "4d9993413706251f",
+            "id": "23aa1a43f7198ada",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -72,12 +43,12 @@
             }
           },
           {
-            "id": "8567f74bd85bbee8",
+            "id": "ec5a9d038caa08bf",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#cartelle",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +60,7 @@
             }
           },
           {
-            "id": "f57941c666f34c1a",
+            "id": "aa115bab117072e8",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -105,15 +76,15 @@
     "width": 300
   },
   "right": {
-    "id": "acdacffdfc4ecae8",
+    "id": "cb25e233155fe8ce",
     "type": "split",
     "children": [
       {
-        "id": "4c33996baac86c3b",
+        "id": "8dfb89147802ee2d",
         "type": "tabs",
         "children": [
           {
-            "id": "4d4c007427e05ec9",
+            "id": "8a4202a9dfcb9879",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -131,7 +102,7 @@
             }
           },
           {
-            "id": "d0cd65855af103c1",
+            "id": "f3bd0abc8c854844",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -144,7 +115,7 @@
             }
           },
           {
-            "id": "3ac858712dbcf1c3",
+            "id": "2422140e4dc8823c",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -157,7 +128,7 @@
             }
           },
           {
-            "id": "5f3218a98e611dbf",
+            "id": "67db17d0932c03e6",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -165,23 +136,13 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
-          },
-          {
-            "id": "f9f2ce15e936e1f8",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 328.5
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -190,18 +151,9 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "d66071482ce2c68c",
-  "lastOpenFiles": [
-    "Obsidian/Sistemi Operativi - Modulo I.md",
-    "Obsidian/Sistemi Operativi - Modulo II.md",
-    "Obsidian/file.css.md",
-    "youtu.be/TN25ghkfgQA.md",
-    "youtu.be",
-    "Untitled",
-    "README.md"
-  ]
+  "active": "a66330531185d053",
+  "lastOpenFiles": []
 }
