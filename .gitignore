@@ -6,3 +6,5 @@
 *.o
 # disignora makefile
 !*makefile
+# disignora le cartelle
+!*/
