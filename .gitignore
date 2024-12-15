@@ -1,0 +1,8 @@
+# ignora tutti
+*
+# disignora i file con estensione
+!*.*
+# ignora i file oggetto
+*.o
+# disignora makefile
+!*makefile
