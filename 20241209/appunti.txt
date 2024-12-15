@@ -1,0 +1,50 @@
+Ultima lezione teorica sui thread.
+O ultima lezinoe teorica, che è sui thread? Chissà
+
+Processi: guardia e ladro scrivono sulla stessa pipe e padre legge
+Thread: tutti i thread condividono la memoria, sfruttiamo questo
+Problema: concorrenza, in fase di scrittura
+
+Abbiamo produttore e consumatore
+Produttore:
+	while(true) {produci, attendi se il buffer è pieno, scrivi, passa alla prossima locazione del buffer, aumenta la lunghezza della coda}
+Consumatore:
+	while(true) {attendi se il buffer è vuoto, leggi, passa alla prossima locazione del buffer, diminuisci la lunghezza della coda}
+
+Invece coi processi la pipe piena si blocca da sola, qui lo implementiamo a mano
+
+Comunque, rischio di race condition. Soluzione? Ci sono dei criteri
+	Un solo thread è nella zona critica alla volta
+	I task possono attendere ma non troppo, non si blocchi
+	I task prima o poi vanno avanti
+Problemi possibili:
+	Deadlock, A aspetta B e B aspetta A
+	Starvation: A aspetta B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, e non solo, Æ, Ð, ...
+
+Possibile soluzione: semafori
+	Semaforo binario: puoi o non puoi entrare, detti mutex (mutual exclusion)
+	Semaforo contatore: rimangono tot posti liberi, detti semafori
+L'aggiornamento dei semafori deve essere un'azione atomica, altrimenti race condition di nuovo
+
+Noi non possiamo predire quale, tra i thread in attesa, sarà il prossimo ad entrare nella zona critica
+
+Non mettere il lock dappertutto assolutamente. Rallenti il programma
+Locka solo quando è necessario
+
+I semafori non mutex si usano quando ok più di un thread ma non troppi
+Con la solita implementazione, il numero non va sotto 0, semplicemente 0 significa pieno
+	Altre implementazione va più negativo più è lunga la coda, ma 󱤴󱤼󱤡 il sistema lo fa al posto nostro
+
+Vedi le slide ez
+
+Per ogni zona critica, ti dichiari tutti i mutex che ti servono
+Non avere un mutex che prende tutto il codice incluse parti non critiche
+
+
+La trylock prova a lockare, se fallisce lo salta e va avanti, non si ferma lì
+Se mi dice che non posso entrare nella zona critica, faccio altro
+
+Con pthread_mutex_init/destroy inizi o distruggi un mutex
+pthread_mutex_lock/trylock/unlock indovina un po' cosa fai
+
+Alcune note per il progetto finale: il codice di oggi è per un produttore e un consumatore. Poi noi la generalizziamo
