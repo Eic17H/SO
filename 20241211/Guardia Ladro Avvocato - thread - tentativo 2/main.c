@@ -19,25 +19,29 @@ typedef struct{
 typedef struct{
     Pos pos;
     Mittente mittente;
+    int* mutex;
 }Data;
 
-int mutex = 0;
-Data buffer[DIM_BUFFER];
-int head=0;
-int tail=(-1)%DIM_BUFFER;
+typedef struct{
+    Data* buffer;
+    int* mutex;
+    int* head;
+    int* tail;
+    Data* data;
+}Pass;
 
-bool codavuota(){
+bool codavuota(int head, int tail){
     return (tail+1-head)%DIM_BUFFER==0;
 }
 
-bool codapiena(){
+bool codapiena(int head, int tail){
     return (head+1-tail)%DIM_BUFFER==0;
 }
 
 void* azioniL(void* data_in){
     srand(time(NULL));
-    Data* data = (Data*) data_in;
-    Pos pos = data->pos;
+    Pass* data = (Pass*) data_in;
+    Pos pos = data->data->pos;
     int r=0;
     while(1){
         r = rand()%4;
@@ -48,25 +52,35 @@ void* azioniL(void* data_in){
             case 3: pos.y--; break;
             default: break;
         }
-        while(codapiena() || mutex) printf("qua\n");
-        mutex = 1;
-        data->pos = pos;
-        buffer[tail] = *data;
-        tail = (tail+1)%DIM_BUFFER;
-        mutex = 0;
+        while(codapiena(*(data->head), *(data->tail)) || *(data->mutex)) printf("qua\n");
+        *(data->mutex) = 1;
+        data->data->pos = pos;
+        (data->buffer)[*(data->tail)] = *(data->data);
+        *(data->tail) = (*(data->tail)+1)%DIM_BUFFER;
+        *(data->mutex) = 0;
         usleep(5000);
     }
 }
 
 int main(){
+    int mutex = 0;
+    Data buffer[DIM_BUFFER];
+    int head=0;
+    int tail=(-1)%DIM_BUFFER;
+    Pass* passL = malloc(sizeof(Pass));
     pthread_t idL;
     Data* datiL = malloc(sizeof(Data));
     (*datiL).pos.x = 3;
     (*datiL).pos.y = 3;
     (*datiL).mittente = LADRO;
-    pthread_create(&idL, NULL, &azioniL, datiL);
+    passL->buffer = buffer;
+    passL->head = &head;
+    passL->tail = &tail;
+    passL->mutex = &mutex;
+    passL->data = datiL;
+    pthread_create(&idL, NULL, &azioniL, passL);
     while(1){
-        while(codavuota() || mutex);
+        while(codavuota(head, tail) || mutex);
         mutex = 1;
         printf("%d   %d\n", buffer[head].pos.x, buffer[head].pos.y);
         head = (head+1)%DIM_BUFFER;
