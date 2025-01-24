@@ -1,0 +1,4 @@
+Un thread kernel non blocca il processo con una syscall
+Produttore consumatore in out counter: lascia sempre una casella vuota (quindi in e out fai 0..n-2) altrimenti race condition, perché le operazioni non sono atomiche
+PCB: informazioni necessarie al funzionamento di un processo
+Peterson: evitare che due processi siano nella sezione critica contemporaneamente usando il numero di posti e un vettore di bool
