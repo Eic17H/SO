@@ -25,10 +25,14 @@
             "id": "d66071482ce2c68c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Obsidian/Sistemi Operativi - Modulo I.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sistemi Operativi - Modulo I"
             }
           },
           {
@@ -65,7 +69,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -196,8 +201,8 @@
   },
   "active": "d66071482ce2c68c",
   "lastOpenFiles": [
-    "Obsidian/Sistemi Operativi - Modulo I.md",
     "Obsidian/Sistemi Operativi - Modulo II.md",
+    "Obsidian/Sistemi Operativi - Modulo I.md",
     "Obsidian/file.css.md",
     "youtu.be/TN25ghkfgQA.md",
     "youtu.be",
